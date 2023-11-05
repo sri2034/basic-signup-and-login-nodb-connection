@@ -1,12 +1,13 @@
 import logo from '.././logo.svg';
+import { Link } from 'react-router-dom';
 import './reg.css'
 function Registration() {
     return (
-        <div className='registration-container row'>
-            <div className='logo col-lg-6 col-md-6 col-sm-12'><img src={logo} alt="logo" required /></div>
+        <div className='registration-container row' style={{borderRadius:'10px'}}>
+            <div className='logo col-lg-6 col-md-6 col-sm-12'><img style={{borderRadius:'10px'}} src={logo} alt="logo" required /></div>
             <div className='reg-form col-lg-6 col-md-6 col-sm-12'>
                 <form className='form'>
-                    <table className='mx-auto'>
+                    <table className='mx-auto' style={{borderRadius:'10px'}}>
                         <thead>
                             <td colSpan={2}>
                                 <h3 className='text-center'>Register Yourself</h3>
@@ -49,7 +50,8 @@ function Registration() {
                         </tbody>
                         <tfoot>
                             <td className='text-center pt-3' colSpan={2}>
-                                <button className='btn btn-primary'>Signup</button>
+                            <Link className='ms-auto' to='/Login'><button className='btn btn-primary opacity-75'>Login</button></Link>
+                            <button type="submit" className='mx-3 btn btn-info opacity-75'>Register</button>
                             </td>
                         </tfoot>
                     </table>
